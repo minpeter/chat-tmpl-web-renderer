@@ -108,3 +108,41 @@ button[type="submit"].w-full.p-3.bg-blue-500.text-white.rounded {
 button[type="submit"].w-full.p-3.bg-blue-500.text-white.rounded:hover {
   background-color: #1d4ed8; /* Tailwind: hover:bg-blue-700 */
 }
+
+/* Styling for the new container that wraps each result section (chat and tokenization) */
+.result-item-container {
+  background-color: #f9fafb; /* Consistent with previous .result-item */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Styling for the main titles within each result-item-container */
+/* e.g., "Chat Template Output", "Tokenization Output" */
+.result-item-container h2 {
+  font-size: 1.25rem; 
+  font-weight: 600; 
+  margin-bottom: 1rem; 
+  color: #111827; 
+}
+
+/* Styling for subheadings within the tokenization output section */
+/* e.g., "Tokens:", "Token IDs:" */
+.tokenization-output-container h3 {
+  font-size: 1.1rem; 
+  font-weight: 500; 
+  margin-top: 1rem; 
+  margin-bottom: 0.5rem; 
+  color: #374151; 
+}
+
+/* Styling for the <pre> tags used in tokenization output */
+.tokenization-output-container pre {
+  background-color: #e5e7eb; 
+  padding: 0.75rem; 
+  border-radius: 6px; 
+  font-size: 0.875rem; 
+  line-height: 1.5;
+  color: #1f2937; 
+  /* whitespace-pre-wrap and font-mono are assumed to be on the elements from page.tsx */
+}
