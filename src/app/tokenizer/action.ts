@@ -8,10 +8,16 @@ export async function Test(
   chatTemplateString: string,
   hfToken?: string
 ): Promise<string> {
-  const tokenizer = await AutoTokenizer.from_pretrained(
-    modelId,
-    hfToken ? { use_auth_token: hfToken } : {}
-  );
+  // Set HF_TOKEN environment variable if hfToken is provided
+  if (hfToken && hfToken.trim() !== "") {
+    process.env.HF_TOKEN = hfToken;
+  } else {
+    // Ensure HF_TOKEN is not set if no token is provided for this specific call
+    // This is to prevent using a token from a previous call in a reused environment.
+    delete process.env.HF_TOKEN;
+  }
+
+  const tokenizer = await AutoTokenizer.from_pretrained(modelId);
 
   // Tokenization Logic
   let tokenizationResult: { tokens: string[]; ids: number[] } = {

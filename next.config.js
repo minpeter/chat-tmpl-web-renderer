@@ -5,9 +5,7 @@ const nextConfig = {
   //   output: "standalone", // Feel free to modify/remove this option
 
   // Indicate that these packages should not be bundled by webpack
-  experimental: {
-    serverExternalPackages: ["sharp", "onnxruntime-node"],
-  },
+  serverExternalPackages: ["sharp", "onnxruntime-node"],
 
   webpack: (config) => {
     // See https://webpack.js.org/configuration/resolve/#resolvealias
