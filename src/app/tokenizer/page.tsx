@@ -36,7 +36,7 @@ export default function Home() {
   });
 
   const handleSubmit = async (formDataEvent: FormData) => {
-    const jinja = new JinjaEnvironment(null);
+    const jinja = new JinjaEnvironment();
     const response = await Test(
       formDataEvent.get("modelId") as string,
       formDataEvent.get("chatTemplate") as string, // Use chatTemplate
