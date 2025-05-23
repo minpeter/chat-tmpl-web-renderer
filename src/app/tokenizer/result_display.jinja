@@ -1,0 +1,8 @@
+<div class="results-container">
+  {% for item_html in results_array %}
+    <div class="result-item">
+      <h3>Rendered Output {{ loop.index }}</h3>
+      {{ item_html | safe }}
+    </div>
+  {% endfor %}
+</div>

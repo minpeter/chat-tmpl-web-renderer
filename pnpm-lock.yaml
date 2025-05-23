@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@huggingface/jinja':
+        specifier: ^0.5.0
+        version: 0.5.0
       '@huggingface/transformers':
         specifier: ^3.0.2
         version: 3.0.2
@@ -92,6 +95,10 @@ packages:
 
   '@huggingface/jinja@0.3.2':
     resolution: {integrity: sha512-F2FvuIc+w1blGsaqJI/OErRbWH6bVJDCBI8Rm5D86yZ2wlwrGERsfIaru7XUv9eYC3DMP3ixDRRtF0h6d8AZcQ==}
+    engines: {node: '>=18'}
+
+  '@huggingface/jinja@0.5.0':
+    resolution: {integrity: sha512-Ptc03/jGRiYRoi0bUYKZ14MkDslsBRT24oxmsvUlfYrvQMldrxCevhPnT+hfX8awKTT8/f/0ZBBWldoeAcMHdQ==}
     engines: {node: '>=18'}
 
   '@huggingface/transformers@3.0.2':
@@ -1987,6 +1994,8 @@ snapshots:
   '@huggingface/jinja@0.2.2': {}
 
   '@huggingface/jinja@0.3.2': {}
+
+  '@huggingface/jinja@0.5.0': {}
 
   '@huggingface/transformers@3.0.2':
     dependencies:
